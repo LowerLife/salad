@@ -68,5 +68,14 @@
 	<false/>
 	<key>KAKAO_APP_KEY</key>
 	<string>__RN_CONFIG_KAKAO_APP_KEY</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>__RN_CONFIG_KAKAO_APP_KEY_URLSCEME</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-5.9.7</string>
+		<string>storylink</string>
+	</array>
 </dict>
 </plist>
