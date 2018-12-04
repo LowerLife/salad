@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "react": "16.6.1",
-    "react-native": "0.57.7"
+    "react-native": "0.57.7",
+    "react-native-kakao-logins": "^1.2.1",
+    "react-navigation": "^3.0.5"
   },
   "devDependencies": {
     "@types/react": "^16.7.11",
@@ -19,9 +21,9 @@
     "metro-react-native-babel-preset": "0.50.0",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "16.6.1",
-    "typescript": "^3.2.1",
     "tslint": "^5.11.0",
-    "tslint-config-airbnb": "^5.11.1"
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.2.1"
   },
   "jest": {
     "preset": "react-native"
