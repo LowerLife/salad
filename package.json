@@ -8,6 +8,9 @@
     "lint": "node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.2.0",
+    "mobx": "^5.7.0",
+    "mobx-react": "^5.4.2",
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-config": "^0.11.7",
