@@ -1,5 +1,5 @@
-import { Counter } from "./Counter";
+import { User } from "./User";
 
 export default {
-  Counter
+  User
 };
