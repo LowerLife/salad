@@ -17,3 +17,4 @@ class UserStore {
 }
 
 export const User = new UserStore();
+export type UserType = typeof User;

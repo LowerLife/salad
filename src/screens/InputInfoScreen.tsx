@@ -1,12 +1,17 @@
 import React from "react";
 import { observer, inject } from "mobx-react";
 import { StyleSheet, View, Text } from "react-native";
+import { UserType } from "./../stores/User";
 
-export default class SplashScreen extends React.Component<{}> {
+@inject(({ User }: { User: UserType }) => ({
+  setUserInfo: User.setUserInfo
+}))
+@observer
+export default class InputInfoScreen extends React.Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>SplashScreen</Text>
+        <Text>InfoInput</Text>
       </View>
     );
   }
