@@ -4232,9 +4232,9 @@ react-native-safe-area-view@^0.11.0:
   version "1.0.0-alpha.16"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.16.tgz#e3651b7077ea8fa04e8dd3265ad9b87f1f77a758"
 
-react-native-swiper@^1.5.14:
+"react-native-swiper@https://github.com/heyman333/react-native-swiper#master":
   version "1.5.14"
-  resolved "https://registry.yarnpkg.com/react-native-swiper/-/react-native-swiper-1.5.14.tgz#1c6f949ca377186300f972bb0f30d24062c899aa"
+  resolved "https://github.com/heyman333/react-native-swiper#91075eff815228907c7bf7e745be229d5c583f6c"
   dependencies:
     prop-types "^15.5.10"
 
