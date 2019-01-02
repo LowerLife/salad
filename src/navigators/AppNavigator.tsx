@@ -4,7 +4,7 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import NavigationService from "../NavigatoinService";
 import SplashScreen from "../screens/SplashScreen";
-import InfoInputScreen from "../screens/InputInfoScreen";
+import IntroScreen from "../screens/IntroScreen";
 
 const fadeIn = (duration: number = 300) => ({
   transitionSpec: {
@@ -27,12 +27,12 @@ const fadeIn = (duration: number = 300) => ({
 const AppNavigator = createStackNavigator(
   {
     Splash: SplashScreen,
-    InfoInput: InfoInputScreen
+    InfoInput: IntroScreen
   },
   {
     headerMode: "none",
     transitionConfig: () => fadeIn(750),
-    navigationOptions: {
+    defaultNavigationOptions: {
       gesturesEnabled: false
     }
   }

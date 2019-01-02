@@ -1,0 +1,1 @@
+export { deviceSizes } from "./deviceSizes";

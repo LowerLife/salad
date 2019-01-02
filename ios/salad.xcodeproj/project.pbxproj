@@ -23,6 +23,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2963AF1ACAE74CBEA828C32B /* SpoqaHanSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C771ADA5774446AC230685 /* SpoqaHanSansBold.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -42,6 +43,8 @@
 		5233D07021B6D8890037CA49 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233D06D21B6D8590037CA49 /* libReactNativeConfig.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		D3BA1AD066C9487197DDF63E /* SpoqaHanSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C43030236C4425A8C6EF989 /* SpoqaHanSansRegular.ttf */; };
+		EC7D3277153E447A9DE7F288 /* Anton.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251234840E684FFBBC1285FD /* Anton.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -368,15 +371,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = salad/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = salad/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		251234840E684FFBBC1285FD /* Anton.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Anton.ttf; path = ../assets/fonts/Anton.ttf; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* salad-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salad-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* salad-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "salad-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5233D05E21B6CF510037CA49 /* RNKakaoLogins.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNKakaoLogins.xcodeproj; path = "../node_modules/react-native-kakao-logins/ios/RNKakaoLogins.xcodeproj"; sourceTree = "<group>"; };
 		5233D06521B6D32E0037CA49 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = "../node_modules/react-native-kakao-logins/ios/Frameworks/KakaoOpenSDK.framework"; sourceTree = "<group>"; };
 		5233D06721B6D8590037CA49 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		52D9DADF21DD15F100BF7496 /* salad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = salad.entitlements; path = salad/salad.entitlements; sourceTree = "<group>"; };
+		5C43030236C4425A8C6EF989 /* SpoqaHanSansRegular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SpoqaHanSansRegular.ttf; path = ../assets/fonts/SpoqaHanSansRegular.ttf; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		A8C771ADA5774446AC230685 /* SpoqaHanSansBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SpoqaHanSansBold.ttf; path = ../assets/fonts/SpoqaHanSansBold.ttf; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		C3FF38562F174203A7C0EBDD /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		D4D6D536C87A4A85AE15B605 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
@@ -522,6 +529,7 @@
 		13B07FAE1A68108700A75B9A /* salad */ = {
 			isa = PBXGroup;
 			children = (
+				52D9DADF21DD15F100BF7496 /* salad.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -554,6 +562,16 @@
 				2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		250EC7CDC47546EBA514A35D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C43030236C4425A8C6EF989 /* SpoqaHanSansRegular.ttf */,
+				A8C771ADA5774446AC230685 /* SpoqaHanSansBold.ttf */,
+				251234840E684FFBBC1285FD /* Anton.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -656,6 +674,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				52D9DA2221D93E9500BF7496 /* Recovered References */,
+				250EC7CDC47546EBA514A35D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -772,6 +791,11 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = Q5VAQ4ZHM5;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1171,6 +1195,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				D3BA1AD066C9487197DDF63E /* SpoqaHanSansRegular.ttf in Resources */,
+				2963AF1ACAE74CBEA828C32B /* SpoqaHanSansBold.ttf in Resources */,
+				EC7D3277153E447A9DE7F288 /* Anton.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1344,6 +1371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = salad/salad.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = Q5VAQ4ZHM5;
@@ -1360,7 +1388,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.yshan.salad;
+				PRODUCT_BUNDLE_IDENTIFIER = org.yshan.blife;
 				PRODUCT_NAME = salad;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1370,6 +1398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = salad/salad.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q5VAQ4ZHM5;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/Frameworks\"";
@@ -1385,7 +1414,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.yshan.salad;
+				PRODUCT_BUNDLE_IDENTIFIER = org.yshan.blife;
 				PRODUCT_NAME = salad;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

@@ -7,6 +7,11 @@
     "test": "jest",
     "lint": "node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts'"
   },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.2.0",
     "mobx": "^5.7.0",
@@ -15,7 +20,10 @@
     "react-native": "0.57.7",
     "react-native-config": "^0.11.7",
     "react-native-gesture-handler": "^1.0.12",
+    "react-native-iphone-x-helper": "^1.2.0",
     "react-native-kakao-logins": "^1.2.1",
+    "react-native-progress": "^3.5.0",
+    "react-native-swiper": "https://github.com/heyman333/react-native-swiper#master",
     "react-navigation": "^3.0.5"
   },
   "devDependencies": {
