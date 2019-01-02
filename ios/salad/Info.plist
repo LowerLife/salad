@@ -80,6 +80,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>SpoqaHanSansRegular.ttf</string>
+		<string>SpoqaHanSansBold.ttf</string>
+		<string>Anton.ttf</string>
 	</array>
 </dict>
 </plist>

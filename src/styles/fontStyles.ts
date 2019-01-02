@@ -43,5 +43,38 @@ export const fontStyles = StyleSheet.create({
     lineHeight: 30,
     letterSpacing: 0,
     color: "#000000"
+  },
+  spoqahansans18PtB: {
+    fontFamily: "SpoqaHanSans-Bold",
+    fontSize: 18,
+    fontWeight: "bold",
+    fontStyle: "normal",
+    lineHeight: 20,
+    letterSpacing: 0,
+    color: "#000000"
+  },
+  anton14Pt: {
+    fontFamily: "Anton",
+    fontSize: 14,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#000000"
+  },
+  anton18Pt: {
+    fontFamily: "Anton",
+    fontSize: 18,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#000000"
+  },
+  anton24Pt: {
+    fontFamily: "Anton",
+    fontSize: 24,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#000000"
   }
 });
