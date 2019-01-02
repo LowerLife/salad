@@ -1,12 +1,15 @@
 import React from "react";
-import { observer, inject } from "mobx-react";
 import { StyleSheet, View, Text } from "react-native";
+
+import { SAText } from "../components/customs";
+import { fontStyles } from "../styles";
 
 export default class SplashScreen extends React.Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>SplashScreen</Text>
+        <SAText style={[fontStyles.anton24Pt]}>B</SAText>
+        <View style={styles.blackLine} />
       </View>
     );
   }
@@ -18,5 +21,11 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center"
+  },
+  blackLine: {
+    backgroundColor: "black",
+    width: 46,
+    height: 4,
+    marginLeft: 33
   }
 });
