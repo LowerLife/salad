@@ -20,6 +20,7 @@
     "react-native": "0.57.7",
     "react-native-config": "^0.11.7",
     "react-native-gesture-handler": "^1.0.12",
+    "react-native-iphone-x-helper": "^1.2.0",
     "react-native-kakao-logins": "^1.2.1",
     "react-native-progress": "^3.5.0",
     "react-native-swiper": "^1.5.14",
