@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { SAText } from "../components/customs";
 import { fontStyles } from "../styles";
 
 export default class SplashScreen extends React.Component<{}> {
-  render() {
+  public render() {
     return (
       <View style={styles.container}>
         <SAText style={[fontStyles.anton24Pt]}>B</SAText>
