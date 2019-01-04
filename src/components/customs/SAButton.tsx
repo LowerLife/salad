@@ -1,12 +1,9 @@
-import React, { ReactNode } from "react";
-import { TouchableHighlight, ViewStyle, RegisteredStyle } from "react-native";
+import React, { ReactChild } from "react";
+import { TouchableHighlight, ViewStyle, StyleProp } from "react-native";
 
 interface IProps {
-  style?:
-    | RegisteredStyle<ViewStyle>
-    | ViewStyle
-    | Array<ViewStyle | RegisteredStyle<ViewStyle>>;
-  children: ReactNode;
+  style?: StyleProp<ViewStyle>;
+  children: ReactChild;
   underlayColor?: string;
   onPress: () => void;
 }

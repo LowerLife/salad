@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
-import { Text, TextStyle, RegisteredStyle } from "react-native";
+import { Text, TextStyle, StyleProp } from "react-native";
 
 interface IProps {
-  style?: RegisteredStyle<TextStyle> | Array<RegisteredStyle<TextStyle>>;
+  style?: StyleProp<TextStyle>;
   children: ReactNode;
 }
 
