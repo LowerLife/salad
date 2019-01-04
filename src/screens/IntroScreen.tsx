@@ -1,13 +1,12 @@
 import React from "react";
 import Swiper from "react-native-swiper";
 import * as Progress from "react-native-progress";
-import { observer, inject } from "mobx-react";
 import { StyleSheet, View, Image } from "react-native";
 import { SafeAreaView } from "react-navigation";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 
+import NavigatoinService from "../NavigatoinService";
 import Images from "../../assets/images";
-import { UserType } from "../stores/User";
 import { SAText, SAButton } from "../components/customs";
 import { fontStyles } from "../styles";
 import { deviceSizes } from "../utils";
@@ -16,10 +15,6 @@ interface IState {
   progress: number;
 }
 
-@inject(({ User }: { User: UserType }) => ({
-  setUserInfo: User.setUserInfo
-}))
-@observer
 export default class IntroScreen extends React.Component<{}, IState> {
   public state: IState = {
     progress: deviceSizes.width
@@ -34,7 +29,7 @@ export default class IntroScreen extends React.Component<{}, IState> {
   };
 
   private onPressStart = () => {
-    alert("기다려줄거죠?❤️");
+    NavigatoinService.replace("InfoInput");
   };
 
   public render() {
