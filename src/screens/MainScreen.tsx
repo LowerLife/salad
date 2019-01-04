@@ -14,7 +14,7 @@ import { fontStyles } from "../styles";
   workEndTime: User.workEndTime
 }))
 @observer
-export default class MainScreen extends React.Component<{}> {
+export default class MainScreen extends React.Component<UserType> {
   public componentDidMount = () => {
     console.log(this.props);
   };
