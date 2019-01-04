@@ -19,6 +19,7 @@
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-config": "^0.11.7",
+    "react-native-datepicker": "^1.7.2",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-iphone-x-helper": "^1.2.0",
     "react-native-kakao-logins": "^1.2.1",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/react": "^16.7.11",
     "@types/react-native": "^0.57.15",
+    "@types/react-native-datepicker": "^1.7.0",
     "@types/react-navigation": "^3.0.1",
     "babel-jest": "23.6.0",
     "jest": "23.6.0",

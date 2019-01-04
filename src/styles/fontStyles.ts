@@ -44,12 +44,21 @@ export const fontStyles = StyleSheet.create({
     letterSpacing: 0,
     color: "#000000"
   },
+  spoqahansans16PtB: {
+    fontFamily: "SpoqaHanSans-Bold",
+    fontSize: 18,
+    fontWeight: "bold",
+    fontStyle: "normal",
+    lineHeight: 26,
+    letterSpacing: 0,
+    color: "#000000"
+  },
   spoqahansans18PtB: {
     fontFamily: "SpoqaHanSans-Bold",
     fontSize: 18,
     fontWeight: "bold",
     fontStyle: "normal",
-    lineHeight: 20,
+    lineHeight: 28,
     letterSpacing: 0,
     color: "#000000"
   },
