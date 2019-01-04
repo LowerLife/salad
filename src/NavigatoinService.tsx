@@ -1,6 +1,6 @@
 import { StackActions, NavigationParams } from "react-navigation";
 
-type RouteName = "Splash" | "InfoInput";
+type RouteName = "Splash" | "WithIntro" | "WithoutIntro" | "InfoInput";
 
 let navigator: any;
 
