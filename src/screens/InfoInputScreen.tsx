@@ -4,6 +4,7 @@ import { getBottomSpace } from "react-native-iphone-x-helper";
 import { observer, inject } from "mobx-react";
 
 import Images from "../../assets/images";
+import NavigatoinService from "../NavigatoinService";
 import { SAText, SAButton } from "../components/customs";
 import { BasicHeader } from "../components/headers";
 import {
@@ -75,9 +76,11 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
       this.workStartDate,
       this.workEndDate
     );
+
+    NavigatoinService.replace("Main");
   };
 
-  render() {
+  public render() {
     const {
       joinDate,
       salaryDate,
