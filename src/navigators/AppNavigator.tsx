@@ -2,7 +2,6 @@ import React from "react";
 import { Easing, Animated } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
-import NavigationService from "../NavigatoinService";
 import SplashScreen from "../screens/SplashScreen";
 import WithIntroNavi from "./WithIntroNavi";
 
@@ -31,7 +30,7 @@ const AppNavigator = createStackNavigator(
   },
   {
     headerMode: "none",
-    transitionConfig: () => fadeIn(600),
+    transitionConfig: () => fadeIn(350),
     defaultNavigationOptions: {
       gesturesEnabled: false
     }
