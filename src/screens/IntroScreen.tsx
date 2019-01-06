@@ -1,6 +1,7 @@
 import React from "react";
 import Swiper from "react-native-swiper";
 import * as Progress from "react-native-progress";
+import * as Animatable from "react-native-animatable";
 import { StyleSheet, View, Image } from "react-native";
 import { SafeAreaView } from "react-navigation";
 import { getBottomSpace } from "react-native-iphone-x-helper";
@@ -13,11 +14,13 @@ import { deviceSizes } from "../utils";
 
 interface IState {
   progress: number;
+  currentIndex: number;
 }
 
 export default class IntroScreen extends React.Component<{}, IState> {
   public state: IState = {
-    progress: deviceSizes.width
+    progress: deviceSizes.width,
+    currentIndex: 0
   };
 
   private onScroll = ({ nativeEvent }: { nativeEvent: any }) => {
@@ -32,8 +35,12 @@ export default class IntroScreen extends React.Component<{}, IState> {
     NavigatoinService.replace("InfoInput");
   };
 
+  private onIndexChanged = (index: number) => {
+    this.setState({ currentIndex: index });
+  };
+
   public render() {
-    const { progress } = this.state;
+    const { progress, currentIndex } = this.state;
     return (
       <SafeAreaView style={styles.container} forceInset={{ bottom: "never" }}>
         <Progress.Bar
@@ -50,6 +57,7 @@ export default class IntroScreen extends React.Component<{}, IState> {
           showsPagination={false}
           onScroll={this.onScroll}
           scrollEventThrottle={100}
+          onIndexChanged={this.onIndexChanged}
         >
           <View style={styles.container}>
             <View style={styles.textContainer}>
@@ -83,7 +91,13 @@ export default class IntroScreen extends React.Component<{}, IState> {
                 </SAText>
                 으로
               </SAText>
-              <SAText style={[fontStyles.spoqahansans18PtB, styles.text]}>
+              <SAText
+                style={[
+                  fontStyles.spoqahansans18PtB,
+                  styles.text,
+                  styles.greyText
+                ]}
+              >
                 미래를 계획하다가 한숨이 나오지만
               </SAText>
             </View>
@@ -106,13 +120,21 @@ export default class IntroScreen extends React.Component<{}, IState> {
               </SAText>
             </View>
             <Image source={Images.img_3} style={styles.image} />
-            <View style={styles.bottomView}>
-              <SAButton onPress={this.onPressStart}>
-                <SAText style={[fontStyles.anton18Pt, styles.white]}>
-                  START
-                </SAText>
-              </SAButton>
-            </View>
+            {currentIndex === 2 && (
+              <Animatable.View
+                style={styles.bottomView}
+                animation="fadeIn"
+                duration={700}
+              >
+                {currentIndex === 2 && (
+                  <SAButton onPress={this.onPressStart}>
+                    <SAText style={[fontStyles.anton18Pt, styles.white]}>
+                      START
+                    </SAText>
+                  </SAButton>
+                )}
+              </Animatable.View>
+            )}
           </View>
         </Swiper>
       </SafeAreaView>

@@ -1,4 +1,5 @@
 import React from "react";
+import * as Animatable from "react-native-animatable";
 import { StyleSheet, View, Image } from "react-native";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 import { observer, inject } from "mobx-react";
@@ -89,14 +90,25 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
       workEndTime
     } = this.state;
 
+    const allFilled =
+      joinDate.length *
+        salaryDate.length *
+        monthSalary.length *
+        workStartTime.length *
+        workEndTime.length !==
+      0;
+
     return (
       <View style={styles.container}>
         <BasicHeader />
         <ScrollIfSmallView>
           <View style={styles.body}>
-            <SAText style={[fontStyles.spoqahansans16PtB, styles.text]}>
-              안녕하세요 🙌
-            </SAText>
+            <View style={styles.withImage}>
+              <SAText style={[fontStyles.spoqahansans16PtB, styles.text]}>
+                안녕하세요
+              </SAText>
+              <Image source={Images.ico_hand} style={styles.handImage} />
+            </View>
             <View style={styles.redContainer}>
               <SAText style={[fontStyles.spoqahansans16PtB, styles.text]}>
                 쥐꼬리만큼 얼마 되지않는
@@ -146,11 +158,17 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
             <Image source={Images.img_4} style={styles.image} />
           </View>
         </ScrollIfSmallView>
-        <View style={styles.bottomView}>
-          <SAButton onPress={this.onPressNext}>
-            <SAText style={[fontStyles.anton18Pt, styles.white]}>NEXT</SAText>
-          </SAButton>
-        </View>
+        {allFilled && (
+          <Animatable.View
+            style={styles.bottomView}
+            animation="fadeIn"
+            duration={1000}
+          >
+            <SAButton onPress={this.onPressNext}>
+              <SAText style={[fontStyles.anton18Pt, styles.white]}>OK</SAText>
+            </SAButton>
+          </Animatable.View>
+        )}
       </View>
     );
   }
@@ -178,8 +196,11 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   image: {
-    width: deviceSizes.width,
-    height: 68
+    width: 144,
+    height: 76,
+    marginTop: 40,
+    marginRight: 0,
+    marginLeft: "auto"
   },
   bottomView: {
     backgroundColor: "black",
@@ -193,5 +214,13 @@ const styles = StyleSheet.create({
   },
   white: {
     color: "white"
+  },
+  withImage: {
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  handImage: {
+    width: 24,
+    height: 21
   }
 });
