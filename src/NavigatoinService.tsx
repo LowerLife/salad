@@ -1,4 +1,8 @@
-import { StackActions, NavigationParams } from "react-navigation";
+import {
+  StackActions,
+  NavigationScreenProp,
+  NavigationState
+} from "react-navigation";
 
 type RouteName = "Splash" | "WithIntro" | "WithoutIntro" | "InfoInput" | "Main";
 
@@ -8,7 +12,10 @@ const setTopLevelNavigator = (navigatorRef: any) => {
   navigator = navigatorRef;
 };
 
-const push = (routeName: RouteName, params?: NavigationParams) => {
+const push = (
+  routeName: RouteName,
+  params?: NavigationScreenProp<NavigationState>
+) => {
   navigator.dispatch(
     StackActions.push({
       routeName,
@@ -21,7 +28,10 @@ const pop = (n = 1) => {
   navigator.dispatch(StackActions.pop({ n }));
 };
 
-const replace = (routeName: RouteName, params?: NavigationParams) => {
+const replace = (
+  routeName: RouteName,
+  params?: NavigationScreenProp<NavigationState>
+) => {
   navigator.dispatch(StackActions.replace({ routeName, params }));
 };
 
