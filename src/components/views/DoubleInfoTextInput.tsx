@@ -25,6 +25,7 @@ export const DoubleInfoTextInput: React.SFC<IProps> = ({
   <View style={styles.container}>
     <View style={styles.textinputContainer}>
       <DatePicker
+        minuteInterval={30}
         style={{ width: 58 }}
         date={firstDate}
         mode="time"
@@ -65,6 +66,7 @@ export const DoubleInfoTextInput: React.SFC<IProps> = ({
       />
       <SAText style={fontStyles.spoqahansans16PtB}>/ </SAText>
       <DatePicker
+        minuteInterval={30}
         style={{ width: 58 }}
         date={secondDate}
         mode="time"

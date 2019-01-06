@@ -1,5 +1,7 @@
 import { observable, action } from "mobx";
 
+import { LocalStorage, USER } from "../utils";
+
 class UserStore {
   @observable monthSalary: number = 0;
   @observable joinDate: Date = new Date();
@@ -19,6 +21,17 @@ class UserStore {
     this.salaryDate = salaryDate;
     this.workStartTime = workStartTime;
     this.workEndTime = workEndTime;
+
+    LocalStorage.setItem(
+      USER,
+      JSON.stringify({
+        monthSalary,
+        joinDate,
+        salaryDate,
+        workStartTime,
+        workEndTime
+      })
+    );
   };
 }
 
