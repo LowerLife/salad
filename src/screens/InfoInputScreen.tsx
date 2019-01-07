@@ -35,8 +35,8 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
     joinDate: "",
     salaryDate: "",
     monthSalary: "",
-    workStartTime: "",
-    workEndTime: ""
+    workStartTime: "10:00",
+    workEndTime: "19:00"
   };
 
   private joinDate = new Date();

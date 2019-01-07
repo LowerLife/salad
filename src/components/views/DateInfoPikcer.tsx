@@ -19,12 +19,12 @@ export const DateInfoPikcer: React.SFC<IProps> = ({
 }) => (
   <View>
     <DatePicker
+      locale="ko"
       style={{ width: "100%" }}
       date={date}
       mode={mode}
       placeholder={placeholder}
       format={format}
-      minDate="2019년 1월 1일"
       maxDate={maxDate}
       confirmBtnText="확인"
       cancelBtnText="취소"
