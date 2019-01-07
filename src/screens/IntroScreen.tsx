@@ -158,10 +158,11 @@ const styles = StyleSheet.create({
   },
   greyText: { color: "#e9e9e9" },
   image: {
-    width: deviceSizes.width,
-    height: 214,
+    width: 194,
+    height: 202,
     position: "absolute",
-    bottom: getBottomSpace() + 60
+    bottom: getBottomSpace() + 60,
+    alignSelf: "center"
   },
   bottomView: {
     backgroundColor: "black",
