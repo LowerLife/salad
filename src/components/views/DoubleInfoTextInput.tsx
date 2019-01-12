@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet } from "react-native";
 import DatePicker, { DatePickerProps } from "react-native-datepicker";
 
 import { fontStyles } from "../../styles";

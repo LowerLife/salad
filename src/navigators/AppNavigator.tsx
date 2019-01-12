@@ -30,7 +30,7 @@ const AppNavigator = createStackNavigator(
   },
   {
     headerMode: "none",
-    transitionConfig: () => fadeIn(350),
+    transitionConfig: () => fadeIn(1000),
     defaultNavigationOptions: {
       gesturesEnabled: false
     }

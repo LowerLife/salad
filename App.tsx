@@ -9,7 +9,7 @@ class App extends Component {
   componentDidMount = () => {
     setTimeout(() => {
       NavigatoinService.push("WithIntro");
-    }, 1500);
+    }, 2000);
   };
 
   render() {

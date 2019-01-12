@@ -1,15 +1,14 @@
 import React from "react";
+import LottieView from "lottie-react-native";
 import { StyleSheet, View } from "react-native";
 
-import { SAText } from "../components/customs";
-import { fontStyles } from "../styles";
+const AnimatedLogo = require("../../assets/lotties/b_life.json");
 
 export default class SplashScreen extends React.Component<{}> {
   public render() {
     return (
       <View style={styles.container}>
-        <SAText style={[fontStyles.anton24Pt]}>B</SAText>
-        <View style={styles.blackLine} />
+        <LottieView source={AnimatedLogo} autoPlay />
       </View>
     );
   }
@@ -18,7 +17,7 @@ export default class SplashScreen extends React.Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "black",
     justifyContent: "center",
     alignItems: "center"
   },
