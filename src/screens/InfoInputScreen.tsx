@@ -1,6 +1,6 @@
 import React from "react";
 import * as Animatable from "react-native-animatable";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, Keyboard } from "react-native";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 import { observer, inject } from "mobx-react";
 
@@ -24,6 +24,7 @@ interface IState {
   monthSalary: string;
   workStartTime: string;
   workEndTime: string;
+  keyboardHide: boolean;
 }
 
 @inject(({ User }: { User: UserType }) => ({
@@ -36,13 +37,40 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
     salaryDate: "",
     monthSalary: "",
     workStartTime: "10:00",
-    workEndTime: "19:00"
+    workEndTime: "19:00",
+    keyboardHide: true
   };
 
   private joinDate = new Date();
   private salaryDate = new Date();
   private workStartDate = 0;
   private workEndDate = 0;
+  private keyboardDidShowListener: any = null;
+  private keyboardDidHideListener: any = null;
+
+  public componentDidMount = () => {
+    this.keyboardDidShowListener = Keyboard.addListener(
+      "keyboardWillShow",
+      this.keyboardWillShow
+    );
+    this.keyboardDidHideListener = Keyboard.addListener(
+      "keyboardDidHide",
+      this.keyboardDidHide
+    );
+  };
+
+  private keyboardWillShow = () => {
+    this.setState({ keyboardHide: false });
+  };
+
+  private keyboardDidHide = () => {
+    this.setState({ keyboardHide: true });
+  };
+
+  public componentWillUnmount = () => {
+    this.keyboardDidShowListener.remove();
+    this.keyboardDidHideListener.remove();
+  };
 
   private onMonthSalaryChange = (text: string) => {
     this.setState({ monthSalary: text });
@@ -81,13 +109,19 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
     NavigatoinService.replace("Main");
   };
 
+  private onTouchStart = () => {
+    Keyboard.dismiss();
+    this.setState({ keyboardHide: true });
+  };
+
   public render() {
     const {
       joinDate,
       salaryDate,
       monthSalary,
       workStartTime,
-      workEndTime
+      workEndTime,
+      keyboardHide
     } = this.state;
 
     const allFilled =
@@ -169,6 +203,9 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
             </SAButton>
           </Animatable.View>
         )}
+        {!keyboardHide && (
+          <View style={styles.overlayView} onTouchStart={this.onTouchStart} />
+        )}
       </View>
     );
   }
@@ -222,5 +259,9 @@ const styles = StyleSheet.create({
   handImage: {
     width: 24,
     height: 21
+  },
+  overlayView: {
+    backgroundColor: "rgba(49,49,49,0.5)",
+    ...StyleSheet.absoluteFillObject
   }
 });
