@@ -162,7 +162,7 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
               placeholder="00월 00일"
               onDateChange={this.onJoinDateChange}
               width={100}
-              mode="datetime"
+              mode="date"
               format="MM월 DD일"
               date={joinDate}
               maxDate={new Date()}
@@ -174,7 +174,7 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
               placeholder="00일"
               onDateChange={this.onSalaryDateChange}
               width={100}
-              mode="datetime"
+              mode="date"
               format="DD일"
               date={salaryDate}
             />

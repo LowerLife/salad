@@ -25,7 +25,11 @@ export default class MainScreen extends React.Component<UserType> {
   public render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={styles.scroll} pagingEnabled>
+        <ScrollView
+          style={styles.scroll}
+          pagingEnabled
+          showsVerticalScrollIndicator={false}
+        >
           <DayScreen />
           <MonthScreen />
           <YearScreen />

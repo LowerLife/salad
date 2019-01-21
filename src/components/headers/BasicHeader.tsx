@@ -15,7 +15,7 @@ export const BasicHeader: React.SFC<IProps> = ({
   textColor
 }) => (
   <View style={[styles.container, { backgroundColor }]}>
-    <SAText style={[fontStyles.anton24Pt, { color: textColor }]}>B</SAText>
+    <SAText style={[fontStyles.anton24Pt, { color: textColor }]}>B LIFE</SAText>
     <View style={[styles.blackLine, { backgroundColor: textColor }]} />
   </View>
 );
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   blackLine: {
     backgroundColor: "black",
-    width: 46,
+    width: 52,
     height: 4
   }
 });
