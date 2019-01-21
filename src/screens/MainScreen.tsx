@@ -1,7 +1,10 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import { observer, inject } from "mobx-react";
 
+import DayScreen from "../screens/DayScreen";
+import MonthScreen from "../screens/MonthScreen";
+import YearScreen from "../screens/YearScreen";
 import { SAText } from "../components/customs";
 import { UserType } from "../stores/User";
 import { fontStyles } from "../styles";
@@ -22,7 +25,15 @@ export default class MainScreen extends React.Component<UserType> {
   public render() {
     return (
       <View style={styles.container}>
-        <SAText style={[fontStyles.anton24Pt]}>MAINScreen</SAText>
+        <ScrollView
+          style={styles.scroll}
+          pagingEnabled
+          showsVerticalScrollIndicator={false}
+        >
+          <DayScreen />
+          <MonthScreen />
+          <YearScreen />
+        </ScrollView>
       </View>
     );
   }
@@ -30,15 +41,15 @@ export default class MainScreen extends React.Component<UserType> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "white",
-    justifyContent: "center",
-    alignItems: "center"
+    flex: 1
   },
   blackLine: {
     backgroundColor: "black",
     width: 46,
     height: 4,
     marginLeft: 34
+  },
+  scroll: {
+    flex: 1
   }
 });

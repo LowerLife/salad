@@ -1,6 +1,14 @@
 import { StyleSheet } from "react-native";
 
 export const fontStyles = StyleSheet.create({
+  spoqahansans12Pt: {
+    fontFamily: "SpoqaHanSans-Regular",
+    fontSize: 12,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#000000"
+  },
   spoqahansans14Pt: {
     fontFamily: "SpoqaHanSans-Regular",
     fontSize: 14,
@@ -62,6 +70,15 @@ export const fontStyles = StyleSheet.create({
     letterSpacing: 0,
     color: "#000000"
   },
+  spoqahansans20PtB: {
+    fontFamily: "SpoqaHanSans-Bold",
+    fontSize: 20,
+    fontWeight: "bold",
+    fontStyle: "normal",
+    lineHeight: 28,
+    letterSpacing: 0,
+    color: "#000000"
+  },
   anton14Pt: {
     fontFamily: "Anton",
     fontSize: 14,
@@ -81,6 +98,22 @@ export const fontStyles = StyleSheet.create({
   anton24Pt: {
     fontFamily: "Anton",
     fontSize: 24,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#000000"
+  },
+  anton26Pt: {
+    fontFamily: "Anton",
+    fontSize: 26,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#000000"
+  },
+  anton28Pt: {
+    fontFamily: "Anton",
+    fontSize: 28,
     fontWeight: "normal",
     fontStyle: "normal",
     letterSpacing: 0,

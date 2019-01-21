@@ -14,7 +14,7 @@ const setItem = (key: string, value: string) =>
     });
   });
 
-const getItem = (key: string) =>
+const getItem = (key: string): Promise<string> =>
   new Promise((resolve, reject) => {
     AsyncStorage.getItem(key, (errors, result) => {
       if (_.isEmpty(errors)) {

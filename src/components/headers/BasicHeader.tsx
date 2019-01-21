@@ -7,12 +7,16 @@ import { fontStyles } from "../../styles";
 
 interface IProps {
   backgroundColor?: string;
+  textColor?: string;
 }
 
-export const BasicHeader: React.SFC<IProps> = ({ backgroundColor }) => (
+export const BasicHeader: React.SFC<IProps> = ({
+  backgroundColor,
+  textColor
+}) => (
   <View style={[styles.container, { backgroundColor }]}>
-    <SAText style={fontStyles.anton24Pt}>B</SAText>
-    <View style={styles.blackLine} />
+    <SAText style={[fontStyles.anton24Pt, { color: textColor }]}>B LIFE</SAText>
+    <View style={[styles.blackLine, { backgroundColor: textColor }]} />
   </View>
 );
 
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
   },
   blackLine: {
     backgroundColor: "black",
-    width: 46,
+    width: 52,
     height: 4
   }
 });

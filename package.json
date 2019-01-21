@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts'"
+    "lint": "node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts'",
+    "ios": "react-native run-ios"
   },
   "rnpm": {
     "assets": [
@@ -16,6 +17,7 @@
     "@babel/plugin-proposal-decorators": "^7.2.0",
     "@types/lodash": "^4.14.119",
     "lodash": "^4.17.11",
+    "lottie-react-native": "^2.5.11",
     "mobx": "^5.7.0",
     "mobx-react": "^5.4.2",
     "react": "16.6.1",
