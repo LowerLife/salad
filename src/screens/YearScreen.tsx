@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   absBlackView: {
     position: "absolute",
     width: deviceSizes.width,
-    height: getStatusBarHeight(true) + 324,
+    height: "50%",
     backgroundColor: colors.black
   },
   wonView: {
