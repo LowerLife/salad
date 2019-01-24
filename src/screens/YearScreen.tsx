@@ -10,10 +10,14 @@ import { SAText, SAButton } from "../components/customs";
 import { colors, fontStyles } from "../styles";
 import { deviceSizes } from "../utils";
 
-export default class YearScreen extends React.Component<{}> {
-  public componentDidMount = () => {};
+interface IProps {
+  money: number;
+  negoDayDiff: number;
+}
 
+export default class YearScreen extends React.PureComponent<IProps> {
   public render() {
+    const { money, negoDayDiff } = this.props;
     return (
       <View style={styles.container}>
         <View style={styles.absBlackView} />
@@ -32,12 +36,12 @@ export default class YearScreen extends React.Component<{}> {
               <SAText
                 style={[fontStyles.spoqahansans20PtB, { color: colors.red }]}
               >
-                {"2개월"}
+                {`${negoDayDiff}개월`}
               </SAText>
               남았어요
             </SAText>
             <SAText style={[fontStyles.anton28Pt, { marginTop: 44 }]}>
-              3,423,090
+              {money.toLocaleString()}
             </SAText>
             <View style={styles.blackLine} />
             <Image source={Images.img_year} style={styles.img} />

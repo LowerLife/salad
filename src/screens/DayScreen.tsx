@@ -8,10 +8,14 @@ import { SAText, SAButton } from "../components/customs";
 import { colors, fontStyles } from "../styles";
 import { deviceSizes } from "../utils";
 
-export default class DayScreen extends React.Component<{}> {
-  public componentDidMount = () => {};
+interface IProps {
+  money: number;
+  getOffDiff: number;
+}
 
+export default class DayScreen extends React.PureComponent<IProps> {
   public render() {
+    const { money, getOffDiff } = this.props;
     return (
       <View style={styles.container}>
         <BasicHeader textColor="white" />
@@ -25,24 +29,32 @@ export default class DayScreen extends React.Component<{}> {
             </SAText>
           </View>
           <View style={styles.bottomAbsView}>
-            <SAText
-              style={[fontStyles.spoqahansans20PtB, { color: colors.white }]}
-            >
-              {"지옥의 회사에서 퇴근시간까지\n"}
+            {getOffDiff !== 0 ? (
               <SAText
-                style={[fontStyles.spoqahansans20PtB, { color: colors.red }]}
+                style={[fontStyles.spoqahansans20PtB, { color: colors.white }]}
               >
-                {"1시간 40분"}
+                {"지옥의 회사에서 퇴근시간까지\n"}
+                <SAText
+                  style={[fontStyles.spoqahansans20PtB, { color: colors.red }]}
+                >
+                  {`${getOffDiff}시간`}
+                </SAText>
+                남았어요.
               </SAText>
-              분 남았어요.
-            </SAText>
+            ) : (
+              <SAText
+                style={[fontStyles.spoqahansans20PtB, { color: colors.white }]}
+              >
+                {"회사가 아닐땐\n편히 쉬어도 좋아요"}
+              </SAText>
+            )}
             <SAText
               style={[
                 fontStyles.anton28Pt,
                 { color: colors.white, marginTop: 44 }
               ]}
             >
-              24,000
+              {money.toLocaleString()}
             </SAText>
             <Image source={Images.img_day} style={styles.img} />
             <View style={styles.whiteLine} />
