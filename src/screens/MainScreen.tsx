@@ -5,24 +5,36 @@ import { observer, inject } from "mobx-react";
 import DayScreen from "../screens/DayScreen";
 import MonthScreen from "../screens/MonthScreen";
 import YearScreen from "../screens/YearScreen";
-import { SAText } from "../components/customs";
-import { UserType } from "../stores/User";
-import { fontStyles } from "../styles";
+import { SalaryType } from "../stores/Salary";
 
-@inject(({ User }: { User: UserType }) => ({
-  monthSalary: User.monthSalary,
-  joinDate: User.joinDate,
-  salaryDate: User.salaryDate,
-  workStartTime: User.workStartTime,
-  workEndTime: User.workEndTime
+@inject(({ Salary }: { Salary: SalaryType }) => ({
+  dayMoney: Salary.dayMoney,
+  monthMoney: Salary.monthMoney,
+  yearMoney: Salary.yearMoney,
+  startCalDayMoney: Salary.startCalDayMoney,
+  startCalMonthMoney: Salary.startCalMonthMoney,
+  startCalYearMoney: Salary.startCalYearMoney,
+  getOffDiff: Salary.getoffTime,
+  salaryDayDiff: Salary.salaryDayDiff,
+  negoDayDiff: Salary.negoTime
 }))
 @observer
-export default class MainScreen extends React.Component<UserType> {
-  public componentDidMount = () => {
-    console.log(this.props);
+export default class MainScreen extends React.Component<SalaryType> {
+  public componentDidMount = async () => {
+    await this.props.startCalDayMoney();
+    await this.props.startCalMonthMoney();
+    await this.props.startCalYearMoney();
   };
 
   public render() {
+    const {
+      dayMoney,
+      monthMoney,
+      yearMoney,
+      getOffDiff,
+      salaryDayDiff,
+      negoDayDiff
+    } = this.props;
     return (
       <View style={styles.container}>
         <ScrollView
@@ -30,9 +42,9 @@ export default class MainScreen extends React.Component<UserType> {
           pagingEnabled
           showsVerticalScrollIndicator={false}
         >
-          <DayScreen />
-          <MonthScreen />
-          <YearScreen />
+          <DayScreen money={dayMoney} getOffDiff={getOffDiff} />
+          <MonthScreen money={monthMoney} salaryDayDiff={salaryDayDiff} />
+          <YearScreen money={yearMoney} negoDayDiff={negoDayDiff} />
         </ScrollView>
       </View>
     );

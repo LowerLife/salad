@@ -43,8 +43,8 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
 
   private joinDate = new Date();
   private salaryDate = new Date();
-  private workStartDate = 0;
-  private workEndDate = 0;
+  private workStartDate = 10;
+  private workEndDate = 19;
   private keyboardDidShowListener: any = null;
   private keyboardDidHideListener: any = null;
 
@@ -88,12 +88,12 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
 
   private onWorkStartTimeChange = (dateStr: string, date: Date) => {
     this.setState({ workStartTime: dateStr });
-    this.workStartDate = date.getTime();
+    this.workStartDate = date.getHours();
   };
 
   private onWorkEndTimeChange = (dateStr: string, date: Date) => {
     this.setState({ workEndTime: dateStr });
-    this.workEndDate = date.getTime();
+    this.workEndDate = date.getHours();
   };
 
   private onPressNext = () => {
