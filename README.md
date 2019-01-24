@@ -1,9 +1,11 @@
 # salad
+
 depromeet 5th final project
 
+### TechStack
 
-### TechStack 
- - react-native
- - mobx
- - typescript
- 
+- react-native
+- mobx
+- typescript
+
+## Download (AppStore)
