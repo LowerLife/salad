@@ -73,7 +73,6 @@ class SalaryStore {
     const userInfoStr = await LocalStorage.getItem(USER);
     const userInfo: UserType = JSON.parse(userInfoStr);
     let workedTime;
-    console.log("userInfo", userInfo);
 
     // 월급날 전 또는 당일일 때
     if (new Date(userInfo.salaryDate).getDate() >= new Date().getDate()) {
@@ -106,9 +105,11 @@ class SalaryStore {
     // 다음년도일 때
     if (new Date(userInfo.joinDate).getFullYear() < new Date().getFullYear()) {
       workedTime =
-        12 - new Date(userInfo.joinDate).getMonth() + 1 - new Date().getMonth();
+        12 -
+        (new Date(userInfo.joinDate).getMonth() + 1) +
+        new Date().getMonth();
     } else {
-      // 이전년도일 또는 같으년도 일때
+      // 이전년도일 또는 같은년도 일때
       workedTime = new Date().getMonth();
     }
 
