@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SplashScreen from "react-native-splash-screen";
 import { Provider } from "mobx-react";
 
 import stores from "./src/stores";
@@ -8,6 +9,7 @@ import { LocalStorage, USER } from "./src/utils/LocalStorage";
 
 class App extends Component {
   componentDidMount = async () => {
+    SplashScreen.hide();
     const userInfoExist: Array<any> = await Promise.all([
       LocalStorage.getItem(USER),
       new Promise(resolve => {

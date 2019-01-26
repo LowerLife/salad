@@ -4266,6 +4266,10 @@ react-native-safe-area-view@^0.11.0:
   version "1.0.0-alpha.16"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.16.tgz#e3651b7077ea8fa04e8dd3265ad9b87f1f77a758"
 
+react-native-splash-screen@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.1.1.tgz#1a4e46c9fdce53ff52af2a2cb4181788c4e30b30"
+
 "react-native-swiper@https://github.com/heyman333/react-native-swiper#master":
   version "1.5.14"
   resolved "https://github.com/heyman333/react-native-swiper#91075eff815228907c7bf7e745be229d5c583f6c"

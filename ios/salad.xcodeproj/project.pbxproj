@@ -38,6 +38,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* saladTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* saladTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		36F0FDF36F42468386F4921E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6D536C87A4A85AE15B605 /* libRNGestureHandler.a */; };
+		521836A721FC909B00A4F6D6 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 521836A621FC908800A4F6D6 /* libSplashScreen.a */; };
 		5233D06421B6CF770037CA49 /* libRNKakaoLogins.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233D06321B6CF510037CA49 /* libRNKakaoLogins.a */; };
 		5233D06621B6D32E0037CA49 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233D06521B6D32E0037CA49 /* KakaoOpenSDK.framework */; };
 		5233D07021B6D8890037CA49 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233D06D21B6D8590037CA49 /* libReactNativeConfig.a */; };
@@ -286,6 +287,13 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
+		521836A521FC908800A4F6D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5218367821FC908800A4F6D6 /* SplashScreen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7682761D8E76B80014119E;
+			remoteInfo = SplashScreen;
+		};
 		5233D06221B6CF510037CA49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5233D05E21B6CF510037CA49 /* RNKakaoLogins.xcodeproj */;
@@ -376,6 +384,7 @@
 		2D02E47B1E0B4A5D006451C7 /* salad-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salad-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* salad-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "salad-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5218367821FC908800A4F6D6 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		5233D05E21B6CF510037CA49 /* RNKakaoLogins.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNKakaoLogins.xcodeproj; path = "../node_modules/react-native-kakao-logins/ios/RNKakaoLogins.xcodeproj"; sourceTree = "<group>"; };
 		5233D06521B6D32E0037CA49 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = "../node_modules/react-native-kakao-logins/ios/Frameworks/KakaoOpenSDK.framework"; sourceTree = "<group>"; };
 		5233D06721B6D8590037CA49 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
@@ -405,6 +414,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521836A721FC909B00A4F6D6 /* libSplashScreen.a in Frameworks */,
 				5233D07021B6D8890037CA49 /* libReactNativeConfig.a in Frameworks */,
 				5233D06421B6CF770037CA49 /* libRNKakaoLogins.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -586,6 +596,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5218367921FC908800A4F6D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				521836A621FC908800A4F6D6 /* libSplashScreen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5233D05F21B6CF510037CA49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +661,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5218367821FC908800A4F6D6 /* SplashScreen.xcodeproj */,
 				5233D06721B6D8590037CA49 /* ReactNativeConfig.xcodeproj */,
 				5233D05E21B6CF510037CA49 /* RNKakaoLogins.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -886,6 +905,10 @@
 					ProductGroup = 5233D05F21B6CF510037CA49 /* Products */;
 					ProjectRef = 5233D05E21B6CF510037CA49 /* RNKakaoLogins.xcodeproj */;
 				},
+				{
+					ProductGroup = 5218367921FC908800A4F6D6 /* Products */;
+					ProjectRef = 5218367821FC908800A4F6D6 /* SplashScreen.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1120,6 +1143,13 @@
 			fileType = archive.ar;
 			path = libjschelpers.a;
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		521836A621FC908800A4F6D6 /* libSplashScreen.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSplashScreen.a;
+			remoteRef = 521836A521FC908800A4F6D6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5233D06321B6CF510037CA49 /* libRNKakaoLogins.a */ = {
@@ -1398,6 +1428,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = salad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1426,6 +1457,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = salad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

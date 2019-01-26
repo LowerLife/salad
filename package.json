@@ -29,6 +29,7 @@
     "react-native-iphone-x-helper": "^1.2.0",
     "react-native-kakao-logins": "^1.2.1",
     "react-native-progress": "^3.5.0",
+    "react-native-splash-screen": "^3.1.1",
     "react-native-swiper": "https://github.com/heyman333/react-native-swiper#master",
     "react-navigation": "^3.0.5"
   },
