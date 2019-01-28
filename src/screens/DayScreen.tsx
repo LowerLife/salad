@@ -1,21 +1,40 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
 import { getBottomSpace } from "react-native-iphone-x-helper";
+import { observer, inject } from "mobx-react";
 
 import Images from "../../assets/images";
 import { BasicHeader } from "../components/headers";
 import { SAText, SAButton } from "../components/customs";
 import { colors, fontStyles } from "../styles";
 import { deviceSizes } from "../utils";
+import {
+  RecommendItemStoreType,
+  RecommendItemType
+} from "../stores/RecommendItem";
 
 interface IProps {
   money: number;
   getOffDiff: number;
+  dayRecommendItems?: RecommendItemType;
+  fetchDayRecommendItems?: (price: number) => void;
 }
 
-export default class DayScreen extends React.PureComponent<IProps> {
+@inject(({ RecommendItem }: { RecommendItem: RecommendItemStoreType }) => ({
+  dayRecommendItems: RecommendItem.dayRecommendItems,
+  fetchDayRecommendItems: RecommendItem.fetchDayRecommendItems
+}))
+@observer
+export default class DayScreen extends React.Component<IProps> {
+  public componentDidMount = () => {
+    if (this.props.fetchDayRecommendItems) {
+      this.props.fetchDayRecommendItems(this.props.money);
+    }
+  };
+
   public render() {
     const { money, getOffDiff } = this.props;
+    console.log(this.props.dayRecommendItems);
     return (
       <View style={styles.container}>
         <BasicHeader textColor="white" />

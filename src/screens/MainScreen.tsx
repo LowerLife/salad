@@ -7,6 +7,7 @@ import MonthScreen from "../screens/MonthScreen";
 import YearScreen from "../screens/YearScreen";
 import { SalaryType } from "../stores/Salary";
 
+// TODO: 아래 모두 자식 컴포넌트로 이동
 @inject(({ Salary }: { Salary: SalaryType }) => ({
   dayMoney: Salary.dayMoney,
   monthMoney: Salary.monthMoney,
