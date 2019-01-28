@@ -4,18 +4,36 @@ import {
   getBottomSpace,
   getStatusBarHeight
 } from "react-native-iphone-x-helper";
+import { observer, inject } from "mobx-react";
 
 import Images from "../../assets/images";
 import { SAText, SAButton } from "../components/customs";
 import { colors, fontStyles } from "../styles";
 import { deviceSizes } from "../utils";
+import {
+  RecommendItemStoreType,
+  RecommendItemType
+} from "../stores/RecommendItem";
 
 interface IProps {
   money: number;
   negoDayDiff: number;
+  yearRecommendItems?: RecommendItemType;
+  fetchYearRecommendItems?: (price: number) => void;
 }
 
-export default class YearScreen extends React.PureComponent<IProps> {
+@inject(({ RecommendItem }: { RecommendItem: RecommendItemStoreType }) => ({
+  monthRecommendItems: RecommendItem.monthRecommendItems,
+  fetchMonthRecommendItems: RecommendItem.fetchMonthRecommendItems
+}))
+@observer
+export default class YearScreen extends React.Component<IProps> {
+  public componentDidMount = () => {
+    if (this.props.fetchYearRecommendItems) {
+      this.props.fetchYearRecommendItems(this.props.money);
+    }
+  };
+
   public render() {
     const { money, negoDayDiff } = this.props;
     return (
