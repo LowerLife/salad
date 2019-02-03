@@ -1,5 +1,13 @@
-import React from "react";
-import { StyleSheet, View, Image } from "react-native";
+import _ from "lodash";
+import React, { RefObject } from "react";
+import {
+  StyleSheet,
+  View,
+  Image,
+  FlatList,
+  Linking,
+  Alert
+} from "react-native";
 import {
   getBottomSpace,
   getStatusBarHeight
@@ -18,8 +26,9 @@ import {
 interface IProps {
   money: number;
   salaryDayDiff: number;
-  monthRecommendItems?: RecommendItemType;
+  monthRecommendItems: RecommendItemType[];
   fetchMonthRecommendItems?: (price: number) => void;
+  current: boolean;
 }
 
 @inject(({ RecommendItem }: { RecommendItem: RecommendItemStoreType }) => ({
@@ -28,14 +37,69 @@ interface IProps {
 }))
 @observer
 export default class MonthScreen extends React.Component<IProps> {
-  public componentDidMount = () => {
-    if (this.props.fetchMonthRecommendItems) {
+  incresingCount: number = 0;
+  scrollView: RefObject<FlatList<RecommendItemType>> = React.createRef();
+  animatedCount: number = 0;
+
+  public componentDidUpdate = () => {
+    this.incresingCount += 1;
+    if (
+      this.props.fetchMonthRecommendItems &&
+      this.props.current &&
+      this.incresingCount % 6 === 0
+    ) {
       this.props.fetchMonthRecommendItems(this.props.money);
+
+      if (
+        this.props.monthRecommendItems.length > 0 &&
+        this.props.monthRecommendItems[this.animatedCount]
+      ) {
+        this.scrollView.current!.scrollToIndex({
+          animated: true,
+          index: this.animatedCount
+        });
+        this.animatedCount += 1;
+      }
     }
   };
 
+  private onPressItem = (url: string) => {
+    try {
+      Linking.openURL(url);
+    } catch (error) {
+      Alert.alert("에러!", "오류가 발생했어요");
+    }
+  };
+
+  private renderItem = ({ item }: { item: RecommendItemType }) => (
+    <SAButton
+      onPress={_.partial(this.onPressItem, item.url)}
+      style={styles.recommnedLine}
+    >
+      <SAText
+        style={[fontStyles.spoqahansans12Pt, { color: colors.dark_grey }]}
+      >
+        현재 돈으로 구매할 수 있는 물품은
+        <SAText style={[fontStyles.spoqahansans12Pt, { color: colors.red }]}>
+          {item.name}
+        </SAText>
+        입니다
+      </SAText>
+    </SAButton>
+  );
+
+  private keyExtractor = (item: RecommendItemType, index: number) =>
+    `${item.id}-${index}`;
+
+  private renderEmptyView = () => (
+    <SAText style={[fontStyles.spoqahansans12Pt, { color: colors.dark_grey }]}>
+      그래도 이 돈으론 뭘 살 수 있지 않을까?
+    </SAText>
+  );
+
   public render() {
-    const { money, salaryDayDiff } = this.props;
+    const { money, salaryDayDiff, monthRecommendItems } = this.props;
+
     return (
       <View style={styles.container}>
         <View style={styles.absRedView} />
@@ -68,20 +132,15 @@ export default class MonthScreen extends React.Component<IProps> {
                 WON
               </SAText>
             </View>
-
-            <SAButton
-              onPress={() => alert("해성이형 도와줘요!")}
-              style={styles.recommnedLine}
-            >
-              <SAText
-                style={[
-                  fontStyles.spoqahansans12Pt,
-                  { color: colors.dark_grey }
-                ]}
-              >
-                현재 돈으로 구매할 수 있는건 스타벅스 아메리카노 입니다.
-              </SAText>
-            </SAButton>
+            <FlatList
+              ref={this.scrollView}
+              showsVerticalScrollIndicator={false}
+              style={styles.list}
+              data={Array.from(monthRecommendItems)}
+              renderItem={this.renderItem}
+              keyExtractor={this.keyExtractor}
+              ListEmptyComponent={this.renderEmptyView}
+            />
           </View>
         </View>
       </View>
@@ -114,7 +173,7 @@ const styles = StyleSheet.create({
     height: 4
   },
   recommnedLine: {
-    marginTop: 50
+    marginTop: 8
   },
   img: {
     position: "absolute",
@@ -130,5 +189,13 @@ const styles = StyleSheet.create({
   wonView: {
     alignItems: "flex-end",
     justifyContent: "center"
+  },
+  emptyView: {
+    height: 24,
+    marginTop: 50
+  },
+  list: {
+    height: 28,
+    marginTop: 19
   }
 });
