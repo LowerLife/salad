@@ -113,8 +113,6 @@ class SalaryStore {
       workedTime = new Date().getMonth();
     }
 
-    console.log(workedTime);
-
     const moneyForSec = await this.getMoneyForSec();
     const defaultMoney = workedTime * input + this.monthMoney;
     this.yearMoney = Math.ceil(defaultMoney);

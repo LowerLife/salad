@@ -23,7 +23,7 @@ class RecommendItemStore {
           price
         }
       );
-      this.dayRecommendItems = dayRecommendItems;
+      this.dayRecommendItems.push(...dayRecommendItems);
     } catch (error) {
       console.log("fetchDayRecommendItems error");
     }
@@ -38,7 +38,7 @@ class RecommendItemStore {
           price
         }
       );
-      this.monthRecommendItems = monthRecommendItems;
+      this.monthRecommendItems.push(...monthRecommendItems);
     } catch (error) {
       console.log("fetchDayRecommendItems error");
     }
@@ -53,7 +53,7 @@ class RecommendItemStore {
           price
         }
       );
-      this.yearRecommendItems = yearRecommendItems;
+      this.yearRecommendItems.push(...yearRecommendItems);
     } catch (error) {
       console.log("fetchDayRecommendItems error");
     }
