@@ -150,7 +150,7 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
               <View style={styles.redLine} />
             </View>
             <InfoTextInput
-              placeholder="월급 실수령액"
+              placeholder="월급 실수령액 (원)"
               keyboardType="numeric"
               value={monthSalary}
               onChangeText={this.onMonthSalaryChange}
@@ -159,11 +159,11 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
               회사에 들어왔던 입사일
             </SAText>
             <DateInfoPikcer
-              placeholder="00월 00일"
+              placeholder="0000년 00월 00일"
               onDateChange={this.onJoinDateChange}
-              width={100}
+              width={200}
               mode="date"
-              format="MM월 DD일"
+              format="YYYY년 MM월 DD일"
               date={joinDate}
               maxDate={new Date()}
             />
@@ -171,11 +171,11 @@ export default class InfoInputScreen extends React.Component<UserType, IState> {
               이 세상에서 가장 행복한 월급일
             </SAText>
             <DateInfoPikcer
-              placeholder="00일"
+              placeholder="0000년 00월 00일"
               onDateChange={this.onSalaryDateChange}
-              width={100}
+              width={200}
               mode="date"
-              format="DD일"
+              format="YYYY년 MM월 DD일"
               date={salaryDate}
             />
             <SAText style={[fontStyles.spoqahansans16PtB, styles.text]}>
