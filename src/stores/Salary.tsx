@@ -13,8 +13,7 @@ class SalaryStore {
   @observable salaryDayDiff: number = 0;
   @observable negoDayDiff: number = 0;
 
-  input: number = 0;
-  daysInMonth: number = 0;
+  defaultDayMoney: number = 0;
 
   @computed get getoffTime(): number {
     return this.getOffDiff;
@@ -56,7 +55,12 @@ class SalaryStore {
       new Date().getSeconds();
     const moneyForSec = await this.getMoneyForSecDay();
 
-    if (workedTime < 0 || userInfo.workEndTime <= new Date().getHours()) {
+    if (workedTime < 0) {
+      this.defaultDayMoney = workedTime * moneyForSec;
+      return;
+    }
+
+    if (userInfo.workEndTime <= new Date().getHours()) {
       return;
     }
 
@@ -77,7 +81,7 @@ class SalaryStore {
     // 월급날 전 또는 당일일 때
     if (new Date(userInfo.salaryDate).getDate() >= new Date().getDate()) {
       workedTime =
-        moment(new Date().getMonth()).daysInMonth() -
+        moment(`${new Date().getMonth() + 1}`, "MM").daysInMonth() -
         new Date(userInfo.salaryDate).getDate() +
         new Date().getDate();
     } else {
@@ -87,10 +91,11 @@ class SalaryStore {
     }
 
     const moneyForSec = await this.getMoneyForSec();
-    const defaultMoney = (workedTime - 1) * 24 * 60 * 60 * moneyForSec;
+    const defaultMoney =
+      (workedTime - 1) * 24 * 60 * 60 * moneyForSec + this.defaultDayMoney;
     this.monthMoney = Math.ceil(defaultMoney);
     this.salaryDayDiff =
-      moment(new Date().getMonth() + 1).daysInMonth() - workedTime;
+      moment(`${new Date().getMonth() + 1}`, "MM").daysInMonth() - workedTime;
     window.setInterval(() => {
       this.monthMoney += Math.ceil(moneyForSec);
     }, 1000);
