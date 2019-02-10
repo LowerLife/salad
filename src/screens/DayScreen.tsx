@@ -90,7 +90,12 @@ export default class DayScreen extends React.Component<IProps> {
     `${item.id}-${index}`;
 
   private renderEmptyView = () => (
-    <SAText style={[fontStyles.spoqahansans12Pt, { color: colors.dark_grey }]}>
+    <SAText
+      style={[
+        fontStyles.spoqahansans12Pt,
+        { color: colors.dark_grey, marginTop: 8 }
+      ]}
+    >
       이 쥐꼬리만한 돈으로 뭘 사지?
     </SAText>
   );
@@ -130,22 +135,24 @@ export default class DayScreen extends React.Component<IProps> {
                 {"회사가 아닐땐\n편히 쉬어도 좋아요"}
               </SAText>
             )}
-            <SAText
-              style={[
-                fontStyles.anton28Pt,
-                { color: colors.white, marginTop: 44 }
-              ]}
-            >
-              {money.toLocaleString()}
-            </SAText>
-            <Image source={Images.img_day} style={styles.img} />
-            <View style={styles.whiteLine} />
-            <View style={styles.wonView}>
+            <View>
+              <Image source={Images.img_day} style={styles.img} />
               <SAText
-                style={[fontStyles.anton14Pt, { color: colors.dark_grey }]}
+                style={[
+                  fontStyles.anton28Pt,
+                  { color: colors.white, marginTop: 44 }
+                ]}
               >
-                WON
+                {money.toLocaleString()}
               </SAText>
+              <View style={styles.whiteLine} />
+              <View style={styles.wonView}>
+                <SAText
+                  style={[fontStyles.anton14Pt, { color: colors.dark_grey }]}
+                >
+                  WON
+                </SAText>
+              </View>
             </View>
             <FlatList
               ref={this.scrollView}
@@ -192,8 +199,9 @@ const styles = StyleSheet.create({
   },
   img: {
     position: "absolute",
-    right: 59,
-    top: 113.2
+    right: 0,
+    top: 57,
+    zIndex: 100
   },
   wonView: {
     alignItems: "flex-end",
