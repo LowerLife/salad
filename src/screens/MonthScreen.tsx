@@ -92,7 +92,12 @@ export default class MonthScreen extends React.Component<IProps> {
     `${item.id}-${index}`;
 
   private renderEmptyView = () => (
-    <SAText style={[fontStyles.spoqahansans12Pt, { color: colors.dark_grey }]}>
+    <SAText
+      style={[
+        fontStyles.spoqahansans12Pt,
+        { color: colors.dark_grey, marginTop: 8 }
+      ]}
+    >
       그래도 이 돈으론 뭘 살 수 있지 않을까?
     </SAText>
   );
@@ -122,15 +127,17 @@ export default class MonthScreen extends React.Component<IProps> {
               </SAText>
               남았어요.
             </SAText>
-            <SAText style={[fontStyles.anton28Pt, { marginTop: 44 }]}>
-              {money.toLocaleString()}
-            </SAText>
-            <View style={styles.blackLine} />
-            <Image source={Images.img_month} style={styles.img} />
-            <View style={styles.wonView}>
-              <SAText style={[fontStyles.anton14Pt, { color: colors.grey }]}>
-                WON
+            <View>
+              <Image source={Images.img_month} style={styles.img} />
+              <SAText style={[fontStyles.anton28Pt, { marginTop: 44 }]}>
+                {money.toLocaleString()}
               </SAText>
+              <View style={styles.blackLine} />
+              <View style={styles.wonView}>
+                <SAText style={[fontStyles.anton14Pt, { color: colors.grey }]}>
+                  WON
+                </SAText>
+              </View>
             </View>
             <FlatList
               ref={this.scrollView}
@@ -177,8 +184,9 @@ const styles = StyleSheet.create({
   },
   img: {
     position: "absolute",
-    right: 59,
-    top: 103
+    right: 0,
+    top: 49,
+    zIndex: 100
   },
   absRedView: {
     position: "absolute",

@@ -92,7 +92,12 @@ export default class YearScreen extends React.Component<IProps> {
     `${item.id}-${index}`;
 
   private renderEmptyView = () => (
-    <SAText style={[fontStyles.spoqahansans12Pt, { color: colors.dark_grey }]}>
+    <SAText
+      style={[
+        fontStyles.spoqahansans12Pt,
+        { color: colors.dark_grey, marginTop: 8 }
+      ]}
+    >
       이걸론 뭐 살 수 있을거같지?
     </SAText>
   );
@@ -121,17 +126,18 @@ export default class YearScreen extends React.Component<IProps> {
               </SAText>
               남았어요
             </SAText>
-            <SAText style={[fontStyles.anton28Pt, { marginTop: 44 }]}>
-              {money.toLocaleString()}
-            </SAText>
-            <View style={styles.blackLine} />
-            <Image source={Images.img_year} style={styles.img} />
-            <View style={styles.wonView}>
-              <SAText style={[fontStyles.anton14Pt, { color: colors.grey }]}>
-                WON
+            <View>
+              <SAText style={[fontStyles.anton28Pt, { marginTop: 44 }]}>
+                {money.toLocaleString()}
               </SAText>
+              <View style={styles.blackLine} />
+              <Image source={Images.img_year} style={styles.img} />
+              <View style={styles.wonView}>
+                <SAText style={[fontStyles.anton14Pt, { color: colors.grey }]}>
+                  WON
+                </SAText>
+              </View>
             </View>
-
             <FlatList
               ref={this.scrollView}
               showsVerticalScrollIndicator={false}
@@ -177,8 +183,9 @@ const styles = StyleSheet.create({
   },
   img: {
     position: "absolute",
-    right: 59,
-    top: 103
+    right: 0,
+    top: 49,
+    zIndex: 100
   },
   absBlackView: {
     position: "absolute",
