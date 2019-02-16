@@ -9,8 +9,8 @@ depromeet 5th final project
 - typescript
 
 ### RoadMap
-- [ ] add feature (react-native-code-push)
-- [ ] Optimize memory usage
+- [x] add feature (react-native-code-push)
+- [ ] optimize memory usage
 - [ ] fix ui bug
 
 ### Download (AppStore)
