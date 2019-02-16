@@ -43,6 +43,7 @@
 		5233D06621B6D32E0037CA49 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233D06521B6D32E0037CA49 /* KakaoOpenSDK.framework */; };
 		5233D07021B6D8890037CA49 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233D06D21B6D8590037CA49 /* libReactNativeConfig.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		A263C022BC7523ED60263353 /* libPods-salad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2276F89132C4B7567622010F /* libPods-salad.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		D3BA1AD066C9487197DDF63E /* SpoqaHanSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C43030236C4425A8C6EF989 /* SpoqaHanSansRegular.ttf */; };
 		EC7D3277153E447A9DE7F288 /* Anton.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251234840E684FFBBC1285FD /* Anton.ttf */; };
@@ -380,6 +381,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = salad/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = salad/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2276F89132C4B7567622010F /* libPods-salad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-salad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		251234840E684FFBBC1285FD /* Anton.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Anton.ttf; path = ../assets/fonts/Anton.ttf; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* salad-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salad-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* salad-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "salad-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -388,6 +390,7 @@
 		5233D05E21B6CF510037CA49 /* RNKakaoLogins.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNKakaoLogins.xcodeproj; path = "../node_modules/react-native-kakao-logins/ios/RNKakaoLogins.xcodeproj"; sourceTree = "<group>"; };
 		5233D06521B6D32E0037CA49 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = "../node_modules/react-native-kakao-logins/ios/Frameworks/KakaoOpenSDK.framework"; sourceTree = "<group>"; };
 		5233D06721B6D8590037CA49 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		526CD49CBD50A9888FD05813 /* Pods-salad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salad.release.xcconfig"; path = "Target Support Files/Pods-salad/Pods-salad.release.xcconfig"; sourceTree = "<group>"; };
 		52D9DADF21DD15F100BF7496 /* salad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = salad.entitlements; path = salad/salad.entitlements; sourceTree = "<group>"; };
 		5C43030236C4425A8C6EF989 /* SpoqaHanSansRegular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SpoqaHanSansRegular.ttf; path = ../assets/fonts/SpoqaHanSansRegular.ttf; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
@@ -399,6 +402,7 @@
 		C041698020714CC687B2CEA8 /* libLottieReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLottieReactNative.a; sourceTree = "<group>"; };
 		C3FF38562F174203A7C0EBDD /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		D4D6D536C87A4A85AE15B605 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
+		E285CD62591AAA22AF94590B /* Pods-salad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salad.debug.xcconfig"; path = "Target Support Files/Pods-salad/Pods-salad.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +435,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				36F0FDF36F42468386F4921E /* libRNGestureHandler.a in Frameworks */,
+				A263C022BC7523ED60263353 /* libPods-salad.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,8 +597,18 @@
 			children = (
 				5233D06521B6D32E0037CA49 /* KakaoOpenSDK.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				2276F89132C4B7567622010F /* libPods-salad.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F26D97DFB0E48B47F2FF1AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E285CD62591AAA22AF94590B /* Pods-salad.debug.xcconfig */,
+				526CD49CBD50A9888FD05813 /* Pods-salad.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		5218367921FC908800A4F6D6 /* Products */ = {
@@ -700,6 +715,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				52D9DA2221D93E9500BF7496 /* Recovered References */,
 				250EC7CDC47546EBA514A35D /* Resources */,
+				3F26D97DFB0E48B47F2FF1AC /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -751,6 +767,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "salad" */;
 			buildPhases = (
+				B7D220DD7F0F8F122904C723 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
@@ -1283,6 +1300,28 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		B7D220DD7F0F8F122904C723 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-salad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1415,6 +1454,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E285CD62591AAA22AF94590B /* Pods-salad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = salad/salad.entitlements;
@@ -1429,6 +1469,7 @@
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios",
 				);
 				INFOPLIST_FILE = salad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1445,6 +1486,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 526CD49CBD50A9888FD05813 /* Pods-salad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = salad/salad.entitlements;
@@ -1458,6 +1500,7 @@
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios",
 				);
 				INFOPLIST_FILE = salad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

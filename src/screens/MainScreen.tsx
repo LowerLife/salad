@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  StatusBar,
   StyleSheet,
   View,
   ScrollView,
@@ -68,6 +69,7 @@ export default class MainScreen extends React.Component<SalaryType, IState> {
 
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <ScrollView
           pagingEnabled
           style={styles.scroll}
