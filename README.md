@@ -12,6 +12,7 @@ depromeet 5th final project
 - [x] add feature (react-native-code-push)
 - [ ] optimize memory usage
 - [ ] fix ui bug
+- [ ] add push notification
 
 ### Download (AppStore)
 
